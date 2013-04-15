@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+ruby File.read(File.expand_path('../.ruby-version', __FILE__))[/^[\d.]+/]
+
+gem 'active_support'
+gem 'i18n'
+gem 'simple_xlsx_writer'

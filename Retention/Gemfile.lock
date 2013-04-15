@@ -1,0 +1,20 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    active_support (3.0.0)
+      activesupport (= 3.0.0)
+    activesupport (3.0.0)
+    fast_xs (0.8.0)
+    i18n (0.6.4)
+    rubyzip (0.9.9)
+    simple_xlsx_writer (0.5.3)
+      fast_xs (>= 0.7.3)
+      rubyzip (>= 0.9.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  active_support
+  i18n
+  simple_xlsx_writer
