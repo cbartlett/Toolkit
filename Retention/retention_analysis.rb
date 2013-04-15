@@ -92,7 +92,7 @@ end
 #================================oOo===================================
 # These two nested loops run through all of the weeks since num_weeks ago, building funnels queries and running them.
 
-SimpleXlsx::Serializer.new(Time.now.to_s[0..19]+".xlsx") do |doc|  # This will create an excel file to output results
+SimpleXlsx::Serializer.new(Time.now.to_s[0..19].strip+".xlsx") do |doc|  # This will create an excel file to output results
     doc.add_sheet("Retention") do |sheet|
         first_row_labels=["Week","Cohort Size"]   # These are the first two column headers in excel
 
