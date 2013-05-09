@@ -150,13 +150,14 @@ SimpleXlsx::Serializer.new(Time.now.to_s[0..19].strip.tr(':','_')+".xlsx") do |d
 
                         if n == 0
                             puts "Cohort Size: "+answer[0].to_s
+                            $cohort_size = answer[0].to_f
                             $row_items << answer[0]
                             puts "Week "+n.to_s+": "+answer.last.to_s
-                            $row_items << (answer.last.to_f/answer[0].to_f)
+                            $row_items << (answer.last.to_f/$cohort_size)
                             $initial_converts = answer.last.to_i
                         else
                             puts "Week "+n.to_s+": "+answer.last.to_s
-                            $row_items << (answer.last.to_f/$initial_converts)
+                            $row_items << (answer.last.to_f/$cohort_size)
                         end
                     else
                         puts query_result.to_s
